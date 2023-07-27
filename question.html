@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quzi...</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="box" id="questionscreen" >
+		<div class="title">
+			TechnoQuest
+		</div>
+		<div class="header">
+			<div class="scorebox">Score : <span></span></div>
+			<div class="timebox">Time left : <span></span></div>
+		</div>
+		<div class="questionbox">"Name the seven colours of the Rainbow?"</div>
+			<div class="optionbox">
+				<span onclick="checkanswer(this)" data-oppt="1"></span>
+				<span onclick="checkanswer(this)" data-oppt="2"></span>
+                <span onclick="checkanswer(this)" data-oppt="3"></span>
+				<span onclick="checkanswer(this)" data-oppt="4"></span>
+			</div>
+		<div class="footer">
+			<button onclick="showNext()">
+				Next
+			</button>
+			<button onclick="showresult(1)">
+				Show Results
+			</button>
+		</div>
+	</div>
+
+  <div class="box" id="resultscreen" style="display: none;">
+    <div class="title">
+    	TechnoQuest
+    </div>
+
+	<div class="resultbox">
+		<label>Questions :</label>
+		<span id="totalquestion">10</span>
+		<label>Attempt :</label>
+		<span id="attemptquestion">0</span>	
+		<label>Correct :</label>
+		<span id="correctanswer">0</span>
+		<label>Wrong :</label>
+		<span id="wronganswer">0</span>
+	</div>
+    <div class="buttonbox">
+    	<a href="index.html">Start Again</a>
+    </div>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="quiz.js" charset="utf-8"></script>
+<script src="script.js"charset="utf-8"></script>
+ </body>
+</html>
